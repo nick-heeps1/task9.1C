@@ -7,9 +7,9 @@ export default function Footer() {
         <div className="footer-column">
           <h4>Explore</h4>
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#">Questions</a></li>
-            <li><a href="#">Articles</a></li>
+            <li><a href="/ArticleCard">Articles</a></li>
             <li><a href="#">Tutorials</a></li>
           </ul>
         </div>

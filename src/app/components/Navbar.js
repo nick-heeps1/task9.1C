@@ -9,7 +9,9 @@ export default function Navbar() {
 return (
     <nav className="navbar">
       <div className="nav-left">
+        <Link href="/" className="logo"> 
         <div className="logo">DEV@DEAKIN</div>
+        </Link>
         <input
           className="search-bar"
           type="text"
@@ -20,8 +22,8 @@ return (
       </div>
 
       <div className="nav-right">
-        <button className="nav-button">POST</button>
-        <button className="nav-button">LOGIN</button>
+        <Link href="/Post"><button className="nav-button">POST</button></Link>
+        <Link href="/login"><button className="nav-button">LOGIN</button></Link>
       </div>
     </nav>
     );
