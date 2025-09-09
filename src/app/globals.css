@@ -1,9 +1,16 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 :root {
   --font-heading:  Poppins, sans-serif;
   --font-body: Roboto, sans-serif;
   --border:#e5e7eb; 
   --text:#111827; 
   --muted:#6b7280; 
+  --fq-border: #eee;
+  --fq-text: #111;
+  --fq-muted: #666;
+  --fq-radius: 10px;
 }
 
 h1, h2, h3, h4 {
@@ -532,4 +539,113 @@ p {
   .auth-grid-2 .col-span-2 {
     grid-column: 1 / -1;
   }
+}
+
+.fq-container{
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 16px;
+}
+
+.fq-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.fq-header-left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.fq-title{ margin: 0; }
+
+.fq-section{
+  border: 1px solid var(--fq-border);
+  border-radius: var(--fq-radius);
+  padding: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.fq-section-title{
+  margin: 0 0 10px 0;
+}
+
+.fq-filter-grid{
+  display: grid;
+  grid-template-columns: 1fr 200px 180px 180px auto auto;
+  gap: 10px;
+  > * { min-width: 0; }
+}
+
+.fq-input, .fq-select, .fq-textarea{
+  width: 100%;
+  max-width: 100%;
+  min-height: 36px;
+  padding: 8px 10px;
+  border: 1px solid var(--fq-border);
+  border-radius: 8px;
+  font: inherit;
+  color: var(--fq-text);
+  background: #fff;
+  display: block;
+}
+.fq-textarea{ 
+  min-height: 120px; 
+  resize: vertical;
+  overflow: auto;
+ }
+
+.fq-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px solid var(--fq-border);
+  background: #fff;
+  cursor: pointer;
+  max-width: 100%;
+}
+.fq-btn-ghost{ background: #fff; }
+.fq-btn-primary{
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+.fq-actions{ display: flex; gap: 10px; }
+
+.fq-card{
+  border: 1px solid var(--fq-border);
+  border-radius: var(--fq-radius);
+  padding: 14px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.fq-card-header{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.fq-card-title{ margin: 0; }
+.fq-card-meta{
+  display: inline-flex;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--fq-muted);
+}
+.fq-card-actions{ display: inline-flex; gap: 8px; }
+.fq-card-body{ margin-top: 10px; }
+.fq-card-description{
+  margin: 0;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.fq-muted{ color: var(--fq-muted); }
+
+@media (max-width: 720px){
+  .fq-filter-grid{ grid-template-columns: 1fr; }
 }
