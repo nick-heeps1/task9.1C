@@ -7,8 +7,28 @@ export default function EmailSignup() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    alert(`Pretend we signed up: ${email}`);
-    setEmail('');
+    const emailTosave = email.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailTosave)) {
+      alert("Please enter a valid email address.");
+      return;
+  }
+
+  fetch('/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: emailTosave }),
+  })
+    .then(async (res) => {
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || 'Subscription failed');
+  alert('Thank you for subscribing!');
+  setEmail('');
+})
+
+    .catch((err) => {
+      console.error(err);
+      alert(err.message || 'Subscription failed');
+    });
   }
 
   return (

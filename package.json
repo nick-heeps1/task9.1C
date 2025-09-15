@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sendgrid/mail": "^8.1.5",
     "firebase": "^12.1.0",
     "next": "15.4.3",
     "react": "19.1.0",
