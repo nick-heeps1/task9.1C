@@ -12,12 +12,12 @@
     "@sendgrid/mail": "^8.1.5",
     "@stripe/react-stripe-js": "^4.0.2",
     "@stripe/stripe-js": "^7.9.0",
-    "codemirror": "^5.65.16",
+    "codemirror": "5.65.20",
     "firebase": "^12.1.0",
     "next": "15.4.3",
-    "react": "19.1.0",
-    "react-codemirror2": "^8.0.1",
-    "react-dom": "19.1.0",
+    "react": "18.3.1",
+    "react-codemirror2": "8.0.1",
+    "react-dom": "18.3.1",
     "react-markdown": "^10.1.0"
   },
   "devDependencies": {
