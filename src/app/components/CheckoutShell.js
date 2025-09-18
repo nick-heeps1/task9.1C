@@ -44,8 +44,8 @@ export default function CheckoutShell() {
         {status === "processing" ? "Processing…" : "Pay $9.99"}
       </button>
 
-      {status === "success" && <p className="success">✅ Payment successful (demo). Premium unlocked.</p>}
-      {status === "error" && <p className="error">⚠️ {error || "Payment failed"}</p>}
+      {status === "success" && <p className="success"> Payment successful (demo). Premium unlocked.</p>}
+      {status === "error" && <p className="error"> {error || "Payment failed"}</p>}
     </form>
   );
 }
