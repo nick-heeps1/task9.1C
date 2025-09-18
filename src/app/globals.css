@@ -1,3 +1,18 @@
+@import 'codemirror/lib/codemirror.css';
+@import 'codemirror/theme/neat.css';
+
+
+
+.CodeMirror {
+  min-height: 240px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+
+
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -648,4 +663,275 @@ p {
 
 @media (max-width: 720px){
   .fq-filter-grid{ grid-template-columns: 1fr; }
+}
+
+
+/* layout helpers */
+.wrap {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 16px;
+}
+
+.wrapNarrow {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 16px;
+}
+
+.wrapWide {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 16px;
+}
+
+.h1 {
+  font-size: 28px;
+  margin: 0 0 16px;
+}
+
+/* navbar */
+.nav {
+  display: flex;
+  gap: 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #ffffff;
+  color: #fff;
+  border: none;
+}
+
+.btnGhost {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #fff;
+  color: #111827;
+  border: 1px solid #111827;
+}
+
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.planCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+}
+
+.price {
+  font-size: 28px;
+  margin: 8px 0 16px;
+}
+
+.planCard ul {
+  margin: 0 0 16px;
+  padding-left: 18px;
+}
+
+.payForm {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.cardBox {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.success {
+  color: #0a7a2f;
+}
+
+.error {
+  color: #b2002d;
+}
+
+.muted {
+  color: #6b7280;
+  margin: 8px 0 16px;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.editorHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.editor {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  padding: 12px;
+}
+
+.preview {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  padding: 12px;
+}
+
+.codeBlock {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #0b1020;
+  color: #e5e7eb;
+  overflow: auto;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.tagBox {
+  position: relative;
+}
+
+.suggestions {
+  position: absolute;
+  z-index: 10;
+  top: 38px;
+  left: 0;
+  right: 0;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 8px;
+  list-style: none;
+  padding: 6px;
+  margin: 0;
+  max-height: 180px;
+  overflow: auto;
+}
+
+.suggestions li {
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background: #f3f4f6;
+}
+
+.tagsRow {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 4px 8px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.CodeMirror {
+  min-height: 260px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+
+.post-form {
+  display: grid;
+  gap: 12px;
+}
+
+.preview-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.editor-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.editor-container {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.editor-loading {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.preview {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.preview h3 {
+  margin-top: 0;
+}
+
+.fq-error {
+  color: crimson;
+}
+
+.codeBlock {
+  background: #333438;
+  padding: 8px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: monospace;
 }

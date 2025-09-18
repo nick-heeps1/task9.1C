@@ -9,6 +9,9 @@ import {
 } from "firebase/firestore";
 import QuestionCard from "@/components/QuestionCard";
 
+import Navbar from '../components/Navbar'; 
+import Footer from '../components/Footer';
+
 export default function FindQuestionPage() {
   const [titleFilter, setTitleFilter] = useState("");
   const [tagFilter, setTagFilter] = useState("");
@@ -145,7 +148,9 @@ export default function FindQuestionPage() {
   };
 
   return (
-    <main className="fq-container">
+    <main>
+      <Navbar />
+      <div  className="fq-container"> 
       <div className="fq-header">
         <div className="fq-header-left">
           <Link href="/"><button className="fq-btn fq-btn-ghost">← Back</button></Link>
@@ -284,6 +289,8 @@ export default function FindQuestionPage() {
           <p className="fq-muted">Results hidden. Click “Show Questions”.</p>
         )
       ) : null}
+      </div>
+      <Footer />
     </main>
   );
 }

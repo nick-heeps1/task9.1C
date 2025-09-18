@@ -32,6 +32,9 @@ return (
       </div>
 
 <div className="nav-right">
+        <Link href="/plans">
+        <button className="nav-button">PLANS</button>
+        </Link>
         <Link href="/find-question">
            <button className="nav-button">FIND QUESTIONS</button>
         </Link>

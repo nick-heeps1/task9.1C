@@ -1,5 +1,7 @@
 
 import "./globals.css";
+import 'codemirror/lib/codemirror.css';
+import 'codemirror/theme/neat.css';
 
 export const metadata = {
   title: "DEV@Deakin",
